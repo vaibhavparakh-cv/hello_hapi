@@ -1,4 +1,6 @@
 hello world
 new world
+testing git commands
+adding new line to it
 another world
 next world
