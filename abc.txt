@@ -1,5 +1,6 @@
 hello world
 new world
+crazy world
 another world to it
 next world
 previous world
