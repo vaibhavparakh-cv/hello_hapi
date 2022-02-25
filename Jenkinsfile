@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh 'npm test'
-                sh 'git merge --abort; git rebase --abort; git clean -fd; git checkout .; BR=$(git branch --show-current); git checkout master; git branch -D $BR; git pull; git checkout $BR;'
+                sh 'git clean -fd; git checkout .; BR=$(git branch --show-current); git checkout master; git branch -D $BR; git pull; git checkout $BR;'
             }
         }
     }
