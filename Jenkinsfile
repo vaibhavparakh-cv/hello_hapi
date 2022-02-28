@@ -6,7 +6,7 @@ pipeline {
             stage('Build') {
                 steps {
                     echo 'Building...'
-                    sh 'git merge --abort; git rebase --abort; git clean -fd; git checkout .'
+                    sh 'git clean -fd ; git checkout . ; git reset --hard ; git checkout master; git pull origin master; git branch -D $Branch; git fetch; git checkout $Branch; git pull;'
                 }
             }
         }
