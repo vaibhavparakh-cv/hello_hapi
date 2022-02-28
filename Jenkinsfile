@@ -6,13 +6,7 @@ pipeline {
             stage('Build') {
                 steps {
                     echo 'Building...'
-                    sh 'npm install'
-                }
-            }
-            stage('Test') {
-                steps {
-                    echo 'Testing...'
-                    sh 'npm test'
+                    sh 'git clean -fd ; git checkout . ; git reset --hard ; git checkout master; git pull origin master; git fetch; git pull;'
                 }
             }
         }
